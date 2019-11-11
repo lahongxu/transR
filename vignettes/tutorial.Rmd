@@ -1,0 +1,30 @@
+---
+title: "Tutorial"
+author: "lahong xu"
+date: "11/11/2019"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+This is a tutorial that teaches you how to use transR to translate DNA or RNA into AA.
+
+# Installation
+This R oackage can be download from Github.
+```{r, eval=FALSE}
+install.packages("devtools")
+library(devtools)
+install_github("lahongxu/transR", build_vignettes = T)
+```
+
+
+# Example
+The code below will generate a statement which we feel is importment for all scientists to agree with.
+```{r}
+library(transR)
+dna <- c("ATGtacacagctaaaGAacggauuuctacacatGAAGgtagagaggccacagagagcacguag")
+translate(dna)
+```
+
